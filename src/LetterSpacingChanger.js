@@ -1,8 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Slider from "@material-ui/core/Slider";
 
+import PrettoSlider from "./PrettoSlider";
 let displayValue = 0;
 
 const useStyles = makeStyles({
@@ -41,12 +41,22 @@ export default function LetterSpacingChanger() {
         {displayValue}
       </Typography>
 
-      <Slider
+      {/* <Slider
         min={-21}
         max={21}
         value={value}
         onChange={handleChange}
         aria-label="letter-spacing"
+      /> */}
+      <PrettoSlider
+        valueLabelDisplay="off"
+        aria-label="letter-spacing"
+        value={value}
+        defaultValue={32}
+        onChange={handleChange}
+        min={-20}
+        max={20}
+        // className={classes.CustomSlider}
       />
     </div>
   );

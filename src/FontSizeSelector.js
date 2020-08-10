@@ -1,12 +1,11 @@
 import React from "react";
-import { withStyles, makeStyles, useTheme } from "@material-ui/core/";
-import Slider from "@material-ui/core/Slider";
+import { makeStyles, useTheme } from "@material-ui/core/";
 import Input from "@material-ui/core/Input";
 import Grid from "@material-ui/core/Grid";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
-
+import PrettoSlider from "./PrettoSlider";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 300 + theme.spacing(3) * 2
@@ -55,39 +54,6 @@ const fontSizes = [
   "200",
   "240"
 ];
-
-const PrettoSlider = withStyles({
-  root: {
-    color: "#52af77",
-    height: 8
-  },
-  thumb: {
-    height: 14,
-    width: 14,
-    backgroundColor: "#fff",
-    border: "2px solid currentColor",
-    marginTop: -3,
-    marginLeft: -12,
-
-    "&:focus, &:hover, &$active": {
-      boxShadow:
-        "inset 0 3px 0px 46px rgba(0,0,0,0.1), inset 0 4px 44px 60px #52af77, inset 0 14px 36px 59px rgba(0,0,0,0.02)",
-      // Reset on touch devices, it doesn't add specificity
-      "@media (hover: none)": {}
-    }
-  },
-
-  active: {},
-  valueLabel: {},
-  track: {
-    height: 7,
-    borderRadius: 4
-  },
-  rail: {
-    height: 6,
-    borderRadius: 4
-  }
-})(Slider);
 
 export default function FontSizeSelector() {
   const classes = useStyles();
