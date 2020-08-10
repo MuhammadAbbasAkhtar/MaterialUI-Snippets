@@ -2,7 +2,7 @@ import React from "react";
 import { withStyles } from "@material-ui/core/";
 import Slider from "@material-ui/core/Slider";
 
-export default PrettoSlider = withStyles({
+const PrettoSlider = withStyles({
   root: {
     color: "#4f6bd7",
     height: 0,
@@ -37,3 +37,5 @@ export default PrettoSlider = withStyles({
     borderRadius: 4
   }
 })(Slider);
+
+export default PrettoSlider;

@@ -52,7 +52,6 @@ export default function LetterSpacingChanger() {
         valueLabelDisplay="off"
         aria-label="letter-spacing"
         value={value}
-        defaultValue={32}
         onChange={handleChange}
         min={-20}
         max={20}
